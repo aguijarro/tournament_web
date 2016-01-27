@@ -1,0 +1,26 @@
+$def with (round, tournament, matchesRounds, matchState, dynamic)
+
+<div class="container">
+  <div class="col-md-12 text-right">
+    <a href="/player_matches/$round" class="btn btn-warning custom-button-width .navbar-right" role="button">Return</a>
+  </div>
+<br>
+<div class="row text-center">
+  <h3>Register Results - $tournament</3>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+          <form action="" method="post">
+            <table class="table">
+            $for input in dynamic.inputs:
+              <tr>
+                <td>$:input.description</td>
+                <td>$:input.render()</td>
+              </tr>
+            </table>
+          </form>
+
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,31 @@
+$def with (tournament, playersTournaments, numberPlayerInTournament, numberPlayerByTournament)
+
+<div class="container">
+  <div class="col-md-12 text-right">
+    <a href="/" class="btn btn-warning custom-button-width .navbar-right" role="button">Return</a>
+    <a href="/assign_players/$tournament[0]" class="btn btn-success custom-button-width .navbar-right" role="button">Assign Player</a>
+  </div>
+
+  <div class="row text-center">
+    <h3>Players enrolled in Tournament - $tournament</3>
+  </div>
+
+  <div class="row">
+        <h5 class="text-center">Maximum number of Players allowed: $numberPlayerByTournament</h5>
+        <h5 class="text-center">Players already register: $numberPlayerInTournament</h5>
+  </div>  
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+          <form action="" method="post">
+            <table class="table">
+            $for player in playersTournaments:
+              <tr>
+                <td>$player[0]</td>
+              </tr>
+            </table>
+          </form>
+  </div>
+</div>
+
+
+</div>

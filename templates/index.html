@@ -1,0 +1,59 @@
+$def with (tournamentList,ELT="$")
+
+<div class="container">
+  <div class="container">
+
+    <div class="col-sm-12 center-block">
+      <div class="row text-center">
+        <h1>P2 Tournament results</h1>
+        <hr>
+      </div>
+      <div class="row text-center">
+        <img src="static/img/tournament.png" class="img-rounded" alt="udacity" width="150" height="150">
+      </div>
+
+      <div class="row text-center">
+        <h3>List of Tournaments</3>
+      </div>
+      <div class="container">
+        <div class="col-md-12 text-right">
+          <a href="/new_tournament" class="btn btn-warning custom-button-width .navbar-right" role="button">New Tournament</a>
+          <a href="/new_player" class="btn btn-success custom-button-width .navbar-right" role="button">New Player</a>
+        </div>
+      <div class="row">
+              <div class="col-md-12">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Number of Players</th>
+                      <th>Number of Rounds</th>
+                      <th>Players</th>
+                      <th>State</th>
+                      <th>Rounds</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    $for tournament in tournamentList:
+                     <tr>
+                         <td>$tournament[1]</td>
+                         <td>$tournament[2]</td>
+                         <td>$tournament[3]</td>
+                         <td>$tournament[4]</td>
+                         <td><a href="/players_tournament/$tournament[0]">>></a></td>
+                         $if tournament[5]:
+                            <td> <img src="static/img/status.jpeg" class="img-rounded" alt="status" width="25" height="25"></td>
+                         $else:
+                            <td><a href="/init_tournament/$tournament[0]">Tournament must be init</td>
+                         <td><a href="/rounds_tournament/$tournament[0]">>></a></td>
+                     </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+      </div>
+
+    </div>
+  </div>
+</div><!--/.container-->

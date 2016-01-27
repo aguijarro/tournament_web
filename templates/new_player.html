@@ -1,0 +1,29 @@
+$def with (form)
+
+<div class="container">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="col-xs-12">
+          <h1 class="text-center">New Player</h1>
+          <form action="" method="post">
+            <table class="table">
+              <tbody>
+                 <tr>
+                    <td>Name:</td>
+                     <td>$:form.name.render()</td>
+                 </tr>
+                 <tr>
+                      <td></td>
+                     <td>$:form.save.render()</td>
+                 </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

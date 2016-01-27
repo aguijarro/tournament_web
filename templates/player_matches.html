@@ -1,0 +1,42 @@
+$def with (round, tournament, matchesRounds, matchStatus, byePlayer, resultStatus)
+
+<div class="container">
+  <div class="col-md-12 text-right">
+    <a href="/rounds_tournament/$tournament" class="btn btn-warning custom-button-width .navbar-right" role="button">Return</a>
+     $if matchStatus:
+        <a href="/new_match/$round" class="btn btn-info custom-button-width .navbar-right" role="button">New Match</a>
+     $if resultStatus:
+        <a href="/result_match/$round" class="btn btn-primary custom-button-width .navbar-right" role="button">New Result</a>
+  </div>
+<br>
+<div class="row text-center">
+  <h3>Matches - $tournament</3>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+          <form action="" method="post">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Id Match</th>
+                  <th>Player 1</th>
+                  <th>Player 2</th>
+                </tr>
+              </thead>
+            <tbody>
+            $for matches in matchesRounds:
+              <tr>
+                <td>$matches[0]</td>
+                <td>$matches[1]</td>
+                <td>$matches[2]</td>
+              </tr>
+            <br>
+            <tr>
+              <td colspan="3"><h4>Bye Player: $byePlayer</h4></td>
+            </tr>
+            </tbody>
+            </table>
+          </form>
+  </div>
+</div>
+</div>

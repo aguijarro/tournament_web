@@ -1,0 +1,38 @@
+$def with (form, tournament, status)
+
+<div class="container">
+  <div class="col-md-12 text-right">
+    <a href="/" class="btn btn-warning custom-button-width .navbar-right" role="button">Return</a>
+  </div>
+
+  <div class="row text-center">
+    <h3>Start Tournament</3>
+  </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+          <form action="" method="post">
+            <table class="table">
+              <tbody>
+                <tr>
+                $if status == 'False':
+                 <td><a href="/players_tournament/$tournament">There are not players enrolled in this Tournament. Please register first!!</td>
+                $else:
+                  <td>
+                    <tr>
+                      <td>Do you want to start the Tournament?</td>
+                      <td>$:form.status.render()</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>$:form.save.render()</td>
+                    </tr>
+                  </td>
+                  </tr>
+
+              </tbody>
+            </table>
+          </form>
+
+  </div>
+</div>
+</div>

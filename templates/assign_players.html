@@ -1,0 +1,27 @@
+$def with (tournament,dynamic)
+
+<div class="container">
+  <div class="col-md-12 text-right">
+    <a href="/players_tournament/$tournament[0]" class="btn btn-success custom-button-width .navbar-right" role="button">Return</a>
+  </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="col-xs-12">
+          <h1 class="text-center">Assing Players</h1>
+          <form action="" method="post">
+            <table class="table">
+            $for input in dynamic.inputs:
+              <tr>
+                <td>$:input.description</td>
+                <td>$:input.render()</td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,37 @@
+$def with (round, form)
+
+<div class="container">
+  <div class="col-md-12 text-right">
+    <a href="/player_matches/$round" class="btn btn-warning custom-button-width .navbar-right" role="button">Return</a>
+  </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="col-xs-12">
+          <h1 class="text-center">New Match</h1>
+          <form action="" method="post">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <tr>
+                      <td>Do you want to create a match:</td>
+                      <td>$:form.status.render()</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>$:form.save.render()</td>
+                    </tr>
+                  </td>
+                  </tr>
+
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

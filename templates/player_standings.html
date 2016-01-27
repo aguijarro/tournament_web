@@ -1,0 +1,40 @@
+$def with (round, tournament, standingsRounds)
+
+<div class="container">
+  <div class="col-md-12 text-right">
+    <a href="/rounds_tournament/$tournament" class="btn btn-warning custom-button-width .navbar-right" role="button">Return</a>
+  </div>
+
+  <div class="row text-center">
+    <h3>Standings - $tournament</3>
+  </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+          <form action="" method="post">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Id Player</th>
+                  <th>Player</th>
+                  <th>Matches</th>
+                  <th>Win</th>
+                  <th>Lost</th>
+                  <th>Tied</th>
+                </tr>
+              </thead>
+            <tbody>
+            $for standing in standingsRounds:
+              <tr>
+                <td>$standing[0]</td>
+                <td>$standing[1]</td>
+                <td>$standing[2]</td>
+                <td>$standing[3]</td>
+                <td>$standing[4]</td>
+                <td>$standing[5]</td>
+              </tr>
+            </tbody>
+            </table>
+          </form>
+  </div>
+</div>
+</div>
